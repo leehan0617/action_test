@@ -1,0 +1,20 @@
+name: test github action
+on:
+  push:
+    branches: [ master, dev ]
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: hello
+        run: echo "Hello world"
+      -
+        name: test pip
+        run: |
+          echo "Step 1..."
+          echo "Step 2..."
+          echo "Step 3..."
+      -
+        name: test end
+        run: echo "Finish"
